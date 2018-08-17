@@ -20,6 +20,6 @@
 
     npm run dev
 
-…or, to expose to the Internet using ngrok:
+…or, to expose to the Internet using [ngrok](https://ngrok.com/):
 
     npm run devPublic
