@@ -1,48 +1,77 @@
-import { SimpleResponse, BasicCard, Button } from 'actions-on-google';
+import {
+  SimpleResponse,
+  BasicCard,
+  Button,
+  Suggestions,
+} from 'actions-on-google';
+
+function formatMonths(months: string[]): string {
+  if (months.length <= 1) {
+    return months.join('');
+  }
+
+  return `${months.slice(0, -1).join(', ')} and ${months.slice(-1)}`;
+}
 
 export const defaultWelcome = conv => {
   console.log('handling default welcome intent');
 
+  const response = 'I can help you find a sunny location for your vacation. Lets get started! Which month suits you?';
+
   conv.ask(
     new SimpleResponse({
-      speech:
-        '<speak>' +
-        'Hello there!' +
-        '<break time="1000ms"/>' +
-        'How are you today?' +
-        '</speak>',
-      text: 'Hello there! How are you today?',
+      speech: `<speak>${response}</speak>`,
+      text: response,
     })
   );
 
-  const date = new Date();
-  conv.ask(
-    new SimpleResponse({
-      speech:
-        '<speak>' +
-        'The time is ' +
-        `<say-as interpret-as="time">${date.toISOString()}</say-as>. ` +
-        'What can I help you with?' +
-        '</speak>',
-      text: `The time is ${date.toLocaleTimeString()}. What can I help you with?`,
-    })
-  );
+  conv.contexts.set('heat-guide-month', 1);
 
-  if (conv.screen) {
-    // user is using a screen based device
-    // - add a second response
-    conv.ask(
-      new BasicCard({
-        text: '**Some bolded text**\n\nHere’s some more text.',
-        buttons: [
-          new Button({ title: 'Button Label', url: 'https://example.com' }),
-        ],
-      })
-    );
-  }
+  conv.ask(new Suggestions('august', 'september', 'october'));
 };
 
 export const defaultFallback = conv => {
   console.log('handling default fallback intent');
-  conv.ask('Sorry, I don’t understand. Can you be more precise?');
+
+  conv.contexts.set('heat-guide-month', 1);
+
+  conv.ask('Sorry, I don’t understand. What month do you want to travel?');
+};
+
+export const vacationGuide = (conv, params) => {
+  console.log('handling heat guide intent');
+
+  console.log(' - datePeriod:', params.datePeriod);
+
+  const month = new Date(params.datePeriod.startDate).toLocaleString('en-us', {
+    month: 'long',
+  });
+
+  console.log(' - month:', month);
+
+  const destinationsForMonth = formatMonths(destinations[month]);
+
+  const response = `Nice, in ${month} I can recommend you to go to ${destinationsForMonth}.`
+
+  conv.close(
+    new SimpleResponse({
+      speech: `<speak>${response}</speak>`,
+      text: response,
+    })
+  );
+};
+
+const destinations = {
+  January: ['Egypt', 'Dubai', 'Greece'],
+  February: ['Spain', 'Portugal', 'Germany'],
+  March: ['Iceland', 'Croatia', 'Morocco'],
+  April: ['France', 'Turkey', 'Mexico'],
+  May: ['Cap Verde', 'Sicily', 'Ibiza'],
+  June: ['Spain', 'France', 'Thailand'],
+  July: ['Corsica', 'Bali'],
+  August: ['Canary Islands', 'Sicily', 'Ibiza'],
+  September: ['Cap Verde', 'Sicily', 'Ibiza'],
+  October: ['Malta', 'Denmark', 'Albania'],
+  November: ['Cyprus', 'Greece', 'Turkey'],
+  December: ['Tunis', 'Spain', 'Bali'],
 };

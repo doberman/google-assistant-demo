@@ -1,0 +1,54 @@
+{
+  "id": "261f77cd-003f-48e4-84e4-5d3de3d51e25",
+  "parentId": "0cd01305-0c82-479f-80a1-20f207d2207e",
+  "rootParentId": "0cd01305-0c82-479f-80a1-20f207d2207e",
+  "name": "Heat Guide – Month",
+  "auto": true,
+  "contexts": [
+    "heat-guide-month"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "heat-guide-month",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "ba08e435-2e20-4dc9-bcde-091d56577c72",
+          "required": true,
+          "dataType": "@sys.date-period",
+          "name": "datePeriod",
+          "value": "$datePeriod",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What month?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1534776242,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -23,3 +23,7 @@
 …or, to expose to the Internet using [ngrok](https://ngrok.com/):
 
     npm run devPublic
+
+## License
+Licensed under the new BSD 3-clause license. See the separate [LICENSE](LICENSE)
+file.

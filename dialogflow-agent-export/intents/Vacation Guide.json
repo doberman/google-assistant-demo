@@ -1,0 +1,43 @@
+{
+  "id": "0cd01305-0c82-479f-80a1-20f207d2207e",
+  "name": "Vacation Guide",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "8fa087e7-b619-4abf-be33-25c9a26fd430",
+          "required": true,
+          "dataType": "@sys.date-period",
+          "name": "datePeriod",
+          "value": "$datePeriod",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What month do you want to travel?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1534922900,
+  "fallbackIntent": false,
+  "events": []
+}

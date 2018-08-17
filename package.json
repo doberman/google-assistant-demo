@@ -19,12 +19,14 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc -w & sleep 2 && PORT=8080 nodemon lib/index.js",
-    "devPublic": "npm run dev & sleep 2.5 && node -e \"(async () => { const ngrokUrl = await require('ngrok').connect(8080); const processTitle = '[' + ngrokUrl + '] – npm run devPublic'; process.stdout.write(String.fromCharCode(27) + ']0;' + processTitle + String.fromCharCode(7)); console.log('ngrok URL:', ngrokUrl); })();\"",
+    "dev": "concurrently -r \"tsc -w\" \"sleep 2 && PORT=8080 nodemon lib/index.js\" || true",
+    "ngrok": "node -e \"(async () => { const ngrokUrl = await require('ngrok').connect(8080); const processTitle = '[' + ngrokUrl + '] – npm run devPublic'; process.stdout.write(String.fromCharCode(27) + ']0;' + processTitle + String.fromCharCode(7)); console.log('ngrok URL:', ngrokUrl); })();\"",
+    "devPublic": "concurrently -r \"npm run dev\" \"sleep 2.5 && npm run ngrok\" || true",
     "lint": "tslint --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "concurrently": "^3.6.1",
     "ngrok": "^3.0.1",
     "nodemon": "^1.18.3",
     "prettier": "^1.14.2",

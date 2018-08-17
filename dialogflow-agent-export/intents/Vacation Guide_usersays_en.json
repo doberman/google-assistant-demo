@@ -1,0 +1,144 @@
+[
+  {
+    "id": "6aca4de9-8fa4-49dd-8357-a8384caf8085",
+    "data": [
+      {
+        "text": "april",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e1a65273-78fc-47a0-9dea-cb1de2ea6dde",
+    "data": [
+      {
+        "text": "Where should i travel in ",
+        "userDefined": false
+      },
+      {
+        "text": "June",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1534861389
+  },
+  {
+    "id": "cfc8d76d-07de-45f4-9a3d-013a0beb2eee",
+    "data": [
+      {
+        "text": "where should i travel in ",
+        "userDefined": false
+      },
+      {
+        "text": "july",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "51f3c0bd-5d81-4b2e-adc8-3025a83634c3",
+    "data": [
+      {
+        "text": "july",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "43f5cf66-9b7d-4ef7-8277-787c06568118",
+    "data": [
+      {
+        "text": "december",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2b8d5774-50a9-41af-91d0-fbd86d0ade8d",
+    "data": [
+      {
+        "text": "september",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1534861389
+  },
+  {
+    "id": "f1167e77-cfa1-4e78-9f4f-f4c24ec4f760",
+    "data": [
+      {
+        "text": "october",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1534861389
+  },
+  {
+    "id": "b6b1f3b5-6e4a-435c-ae18-1c5c32e93fc1",
+    "data": [
+      {
+        "text": "I want to travel in ",
+        "userDefined": false
+      },
+      {
+        "text": "October",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1534861389
+  },
+  {
+    "id": "48cfa370-632f-499d-a968-4b42061cb09f",
+    "data": [
+      {
+        "text": "Where should I go for vacation in ",
+        "userDefined": false
+      },
+      {
+        "text": "September",
+        "alias": "datePeriod",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1534861389
+  }
+]
