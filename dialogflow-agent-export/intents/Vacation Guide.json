@@ -1,5 +1,5 @@
 {
-  "id": "0cd01305-0c82-479f-80a1-20f207d2207e",
+  "id": "e74c3c36-c15a-4daa-8b26-816e9e9c7ab4",
   "name": "Vacation Guide",
   "auto": true,
   "contexts": [],
@@ -9,7 +9,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "8fa087e7-b619-4abf-be33-25c9a26fd430",
+          "id": "2b31bdcf-9975-4348-810d-755fef322ad3",
           "required": true,
           "dataType": "@sys.date-period",
           "name": "datePeriod",
@@ -37,7 +37,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1534922900,
+  "lastUpdate": 1534941992,
   "fallbackIntent": false,
   "events": []
 }

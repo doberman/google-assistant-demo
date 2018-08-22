@@ -21,7 +21,7 @@
   },
   "defaultTimezone": "Europe/Kaliningrad",
   "webhook": {
-    "url": "https://ca054646.ngrok.io",
+    "url": "https://example.com",
     "headers": {
       "": ""
     },
