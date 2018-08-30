@@ -25,15 +25,11 @@ export const defaultWelcome = conv => {
     })
   );
 
-  conv.contexts.set('heat-guide-month', 1);
-
   conv.ask(new Suggestions('august', 'september', 'october'));
 };
 
 export const defaultFallback = conv => {
   console.log('handling default fallback intent');
-
-  conv.contexts.set('heat-guide-month', 1);
 
   conv.ask('Sorry, I don’t understand. What month do you want to travel?');
 };
